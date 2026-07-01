@@ -20,7 +20,7 @@ def ask_question(llm, vector_store, question):
     retriever = vector_store.as_retriever(
         search_type="mmr",
         search_kwargs={
-            "k": 2,
+            "k": 3,
             "fetch_k": 5,
             "lambda_mult": 0.5
         }
