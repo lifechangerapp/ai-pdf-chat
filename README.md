@@ -36,16 +36,25 @@ An intelligent, offline-first PDF chatbot that lets you upload any PDF and ask n
 ## Architecture
 
 ```mermaid
-flowchart TD
-    A[User] --> B[Upload PDF]
-    B --> C[Extract Text]
-    C --> D[Split into Chunks]
-    D --> E[Generate Embeddings]
-    E --> F[FAISS Vector Store]
-    F --> G[Retrieve Relevant Chunks]
-    G --> H[LLM (Ollama)]
-    H --> I[Answer with Sources]
-    I --> A
+flowchart LR
+    A([User])
+    B[Upload PDF]
+    C[Extract Text]
+    D[Split into Chunks]
+    E[Generate Embeddings]
+    F[(FAISS Vector Store)]
+    G[Retrieve Relevant Chunks]
+    H[Ollama LLM]
+    I([Answer])
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
 ```
 
 ### Workflow
