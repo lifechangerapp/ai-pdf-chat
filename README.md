@@ -97,9 +97,9 @@ source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
 # 4️⃣ Install Ollama (https://ollama.com)
+#    Windows: Download installer from ollama.com
 #    macOS: brew install ollama
 #    Linux: curl -fsSL https://ollama.com/install.sh | sh
-#    Windows: Download installer from ollama.com
 
 # 5️⃣ Pull the LLM model (run after Ollama installation)
 ollama pull llama3.2
